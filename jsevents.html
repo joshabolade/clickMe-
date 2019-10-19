@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JAVASCRIPT EVENTS/EVENT HANDLERS</title>
+        <style type="text/css">
+             body {
+                background-color: black;
+                color: whitesmoke;
+            }
+        
+            button {
+                background-color: aqua;
+                margin-top: 70px;
+                padding: 40px;
+                font-size: 50px;
+            }
+             
+             p {
+                 margin-top: 180px;
+                 font-size: 50px;
+                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             }
+        </style>
+       
+    </head>
+    <body>
+
+        <center>
+                <p id="para">HI!, Am Rays and am SMART, CLICK ME TO KNOW.</p>
+                <button onClick="handleClick()">CLICK ME </button>
+        </center>
+        
+
+        <script type="text/javascript">
+            
+            var tracker = 0; //tracks all the click events
+
+            //handles the click event
+            function handleClick(){
+               tracker++; //increments the tracker variable
+               if(tracker == 1){
+                   document.getElementById('para').innerHTML = "VOILA! YOU JUST CLICKED ME ONCE";
+               } else {
+                   document.getElementById('para').innerHTML = "YOU JUST CLICKED ME " + tracker + "times."
+               }
+            }
+            
+        </script>
+    </body>
+</html>
